@@ -1,7 +1,7 @@
 from math import  *
 
 #N=int(input("taille de votre sapin : "))
-#def sapin(x):
+#def sapin(x:int)->int:
 #    if x!= 0:
 #        print(x*' '+((N-x)*2+1)*'^')
 #        sapin(x-1)
@@ -10,7 +10,7 @@ from math import  *
 
 #-------------------------------------------
 #
-#def HT (z):
+#def HT (z:int)->int:
 #    n=1
 #    while n!=0:
 #        ttc=z*1.20
@@ -30,7 +30,7 @@ from math import  *
 #v=int(input("nombre de vache tué par le chasseur : "))
 #a=int(input("nombre d' ami tué par le chasseur : "))
 #z=100
-#def amende(p,c,v,a,z):
+#def amende(p:int,c:int,v:int,a:int,z:int)->int:
 #    z=z-(p*1+c*3+v*5+a*10)
 #    if z >0:
 #        print("il reste ",z,"points au chasseur, il n'a donc pas perdu son permis")
