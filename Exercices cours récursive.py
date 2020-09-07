@@ -21,7 +21,7 @@ def somme(n:int)->int:
         return n+somme(n-1)
         
 #print(somme(2955))
-
+#-------------------------------------------
 def fact(n:int)->int:
     """
     Cette fonction renvoie de résultat de factoriel n
@@ -41,7 +41,7 @@ def fact2(n:int)->int:
     return S
 
 print(fact2(5))
-
+#-------------------------------------------
 
 def boucle(i:int,k:int)->int:  
     assert type(i)==int, "i doit être un entier"
@@ -64,18 +64,37 @@ def boucle2(i:int,k:int)->int:
         
 print(boucle2(0,6))
 
+#-------------------------------------------
 
-#def russe(x:int,y:int)->int:
-#    if x or y ==0:
-#        return 0
-#    else:
-#        return x * y
-#print(russe(105,253))
 
     
+def fibo(n:int)->int:
+    if n<=0:
+        return n
+    else:
+        return (fibo(n-1)+fibo(n-2))
+print(fibo(4))
+        
+
+#-------------------------------------------    
     
-    
-    
+def russe(x:int,y:int)->int:
+    """
+    Cette fonction permet de calculer la multiplication de deux entier
+    """
+    assert type(x)== int,"x doit être un entier"
+    assert type(y)== int,"y doit être un entier"
+    if x<=0:
+        return 0
+    elif x % 2 == 0:
+        return russe(x//2 , y+y)
+    else:
+        return russe(x//2 , y+y) + y
+
+print(russe(105,253))
+
+
+
     
     
     
