@@ -32,7 +32,7 @@ def fact(n:int)->int:
         return 1
     else:
         return n*fact(n-1) 
-print(fact(5))
+#print(fact(5))
 
 def fact2(n:int)->int:
     S=1
@@ -40,7 +40,7 @@ def fact2(n:int)->int:
         S=S*i
     return S
 
-print(fact2(5))
+#print(fact2(5))
 #-------------------------------------------
 
 def boucle(i:int,k:int)->int:  
@@ -54,7 +54,7 @@ def boucle(i:int,k:int)->int:
         
     return    
     
-print(boucle(0,3))
+#print(boucle(0,3))
 
 def boucle2(i:int,k:int)->int:
     for i in range (i,k):
@@ -62,18 +62,26 @@ def boucle2(i:int,k:int)->int:
         print(s)
         s=i+1
         
-print(boucle2(0,6))
+#print(boucle2(0,6))
 
 #-------------------------------------------
 
 
     
 def fibo(n:int)->int:
-    if n<=0:
-        return n
-    else:
-        return (fibo(n-1)+fibo(n-2))
-print(fibo(4))
+    """
+    Cette fonction permet de calculer le résultat selon le rang de suite la fibonacci 
+    """
+    assert type(n)==int,"n doit être une entier"
+    if n==0:
+        return 0
+    elif n==1:
+        return 1
+        
+    else:       
+        return fibo(n-1)+fibo(n-2)  
+
+print(fibo(25))
         
 
 #-------------------------------------------    
