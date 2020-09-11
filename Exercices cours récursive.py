@@ -1,26 +1,27 @@
-#def somme(n:int)->int:
-#    """
-#    Cette fonction permet de calculer la somme des chiffres de n entier : exemple de n=3 -> 6
-#    
-#    Cette fonction demande un entier et retourne un entier  
-#    """
-#    assert type(n)==int, "n doit être un entier"
-#    assert n>1, "n doit être superieur à 0"
-#    S=0
-#    for i in range(1,n+1):
-#        S+=i
-#    return(S)
+from turtle import *
+def somme(n:int)->int:
+    """
+    Cette fonction permet de calculer la somme des chiffres de n entier : exemple de n=3 -> 6
+    
+    Cette fonction demande un entier et retourne un entier  
+    """
+    assert type(n)==int, "n doit être un entier"
+    assert n>1, "n doit être superieur à 0"
+    S=0
+    for i in range(1,n+1):
+        S+=i
+    return(S)
 #print(somme(3))
 
 #-------------------------------------------
 
-def somme(n:int)->int:
+def somme2(n:int)->int:
     if n==0:
         return 0
     else :
         return n+somme(n-1)
         
-#print(somme(2955))
+#print(somme2(2955))
 #-------------------------------------------
 def fact(n:int)->int:
     """
@@ -66,9 +67,22 @@ def boucle2(i:int,k:int)->int:
 
 #-------------------------------------------
 
-
-    
 def fibo(n:int)->int:
+    a=0
+    b=1
+    u=0
+    for i in range (n-1):
+        u=a+b
+        a=b
+        b=u
+    return u
+print(fibo(7))
+        
+#------------------------------------------- 
+
+        
+    
+def fibo_rec(n:int)->int:
     """
     Cette fonction permet de calculer le résultat selon le rang de suite la fibonacci 
     """
@@ -79,12 +93,12 @@ def fibo(n:int)->int:
         return 1
         
     else:       
-        return fibo(n-1)+fibo(n-2)  
+        return fibo_rec(n-1)+fibo_rec(n-2)  
 
-print(fibo(25))
+print(fibo_rec(8))
         
 
-#-------------------------------------------    
+#------------------------------------------
     
 def russe(x:int,y:int)->int:
     """
@@ -92,22 +106,18 @@ def russe(x:int,y:int)->int:
     """
     assert type(x)== int,"x doit être un entier"
     assert type(y)== int,"y doit être un entier"
-    if x<=0:
+    if x==0:
         return 0
     elif x % 2 == 0:
         return russe(x//2 , y+y)
     else:
         return russe(x//2 , y+y) + y
 
-print(russe(105,253))
+#print(russe(105,253))
 
 
 
-    
-    
-    
-    
-    
+
     
     
     
