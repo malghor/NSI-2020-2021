@@ -95,7 +95,7 @@ def fibo_rec(n:int)->int:
     else:       
         return fibo_rec(n-1)+fibo_rec(n-2)  
 
-print(fibo_rec(8))
+print(fibo_rec(7))
         
 
 #------------------------------------------
