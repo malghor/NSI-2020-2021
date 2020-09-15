@@ -3,7 +3,7 @@ from random import *
 
 
 class Domino:
-    def __init__(self,droite,gauche):
+    def __init__(self,gauche,droite):
         self.droite=droite
         self.gauche=gauche
         
@@ -14,9 +14,8 @@ class Domino:
     
     
     def nbPoint(self):
-        self.droite=self.droite
-        self.gauche=self.gauche
-        
+        points=self.getDroite+self.getGauche
+        return points
         
     def Blanc(self):
         if self.getDroite==0 and self.getGauche==0:      
@@ -37,11 +36,13 @@ class Domino:
     def afficher(self):
         if self.getDroite==self.getGauche:
             return self.Double
+            return self.nbPoint
         elif self.getDroite==0 and self.getGauche==0:
             return self.Blanc
+            return self.nbPoint
         else:
-            print(self.getGauche,self.getDroite)
-        
+            print(self.getGauche(),self.getDroite())
+            
     
-d=Domino(1,5)
+d=Domino(0,6)
 d.afficher()

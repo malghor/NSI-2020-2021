@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 from turtle import *
 def koch(n,longueur):
-    speed(0)
+    speed(100)
     pencolor("black")
-    shape("turtle")
-    ht()
+    
+    
 
     if n==0:
         forward(longueur)
@@ -16,3 +17,6 @@ def koch(n,longueur):
         left(60)
         koch(n-1,longueur/3)
 print(koch(3,300))
+
+def flocon(n,longueur):
+    
