@@ -11,8 +11,8 @@ class Chrono:
         print (str(self.heures)+"h "
                 +str(self.minutes)+"m "
                 +str(self.secondes)+"s ")
-#t=Chrono(21,34,55)
-#t.afficher()
+t=Chrono(21,34,55)
+t.afficher()
 
 #print(t)
 #print(t.__doc__)
@@ -50,7 +50,7 @@ triceratops.getLongueur()
 
 
 
-
+"""
 class Point:
     def __init__(self,x,y):
         self.x=x
@@ -97,7 +97,7 @@ print(point1.getRho())
 print(point1.getTheta())
 print(point1.getX())
 print(point1.getY())
-
+"""
         
     
     

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from math import *
 h=int(input("quelle est la hauteur de votre cône"))
 r=int(input("quelle est le rayon de votre cône"))

@@ -1,9 +1,10 @@
+# -*- coding: utf-8 -*-
 from random import*
 def devinette(s):
     start=True
     while start :
         x=randint(1,15)
-        r=int(input("votre chiffre"))
+        r=int(input("votre chiffre entre 1 et 15"))
         if r==x:
             return("Bravo vous avez trouver le bon nombre")
             start = False
