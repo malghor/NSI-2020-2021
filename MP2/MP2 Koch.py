@@ -24,4 +24,5 @@ def flocon(n, longueur) :
 		right(120)
         
 flocon(3,300)
+
     

@@ -62,14 +62,20 @@ class Date():
         mois=["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Décembre"]
         print(self.getJ(),mois[self.m-1],self.getA())
         
-    def anterieurA(self,jour2,mois2,année2):
-        if année2==self.getJ:
-            if mois2
-            
+    def anterieurA(self,d1):
+        """
+       Retourne True si d1 est est antérieur a d2, sinon renvoie False 
+        """
+        return self.a<d1.a  or \
+            self.a==d1.a and (self.m<d1.m or\
+            self.m==d1.m and self.j<d1.j)
         
 
-x=Date(16,9745,1789)
-x.afficher()
+d1=Date(16,9745,1789)
+d2=Date(12,73536,1998)
+d1.afficher()
+d2.afficher()
+print(d1.anterieurA(d2))
         
 
 
